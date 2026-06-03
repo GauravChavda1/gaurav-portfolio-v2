@@ -116,7 +116,7 @@ export default function Hero() {
                 Contact Me
               </a>
               <a
-                href="/Gaurav_Chavda_Resume.pdf"
+                href="/gaurav_chavda_resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 rounded-xl font-semibold text-sm border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10 transition-all flex items-center gap-2"
