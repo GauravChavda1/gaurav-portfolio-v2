@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail,   ArrowUpRight, MapPin } from "lucide-react";
 import { GithubIcon } from "./GithubIcon";
 import { LinkedInIcon } from "./LinkedInIcon";
-
+import { Mail, ArrowUpRight, MapPin, MessageCircle } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 const contactLinks = [
   {
     icon: <Mail size={20} />,
@@ -27,6 +27,15 @@ const contactLinks = [
     bg: "hover:bg-blue-500/10",
   },
   {
+  icon: <FaWhatsapp size={20} />,
+  label: "WhatsApp",
+  value: "+91 9904525377",
+  href: "https://wa.me/919904525377",
+  color: "from-green-500 to-emerald-600",
+  border: "border-green-500/30",
+  bg: "hover:bg-green-500/10",
+},
+  {
     icon: <GithubIcon size={20} />,
     label: "GitHub",
     value: "github.com/GauravChavda1",
@@ -35,6 +44,7 @@ const contactLinks = [
     border: "border-slate-500/30",
     bg: "hover:bg-white/5",
   },
+ 
 ];
 
 export default function Contact() {
@@ -57,7 +67,7 @@ export default function Contact() {
           <span className="text-cyan-400 text-sm font-medium uppercase tracking-widest">Get In Touch</span>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mt-2">Let&apos;s Build Something Together</h2>
           <p className="text-slate-400 mt-4 text-lg max-w-xl mx-auto">
-            Open to Flutter Developer opportunities, freelance work, and innovative product collaborations.
+           Open to Flutter Developer roles, freelance projects, and long-term product collaborations.
           </p>
         </motion.div>
 
@@ -91,7 +101,7 @@ export default function Contact() {
             </div>
 
             {/* Contact Links */}
-            <div className="grid sm:grid-cols-3 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {contactLinks.map((link, i) => (
                 <motion.a
                   key={link.label}
@@ -121,7 +131,7 @@ export default function Contact() {
             <div className="mt-8 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
               <p className="text-slate-500 text-sm">
                 Response time:{" "}
-                <span className="text-slate-300">Usually within 24 hours</span>
+                <span className="text-slate-300">Usually within a few hours </span>
               </p>
               <a
                 href="mailto:gauravchavda3430@gmail.com"

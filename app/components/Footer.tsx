@@ -10,10 +10,10 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-2">
           <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
-            <Code2 size={14} className="text-white" />
-          </div>
+  <span className="text-white text-xs font-bold">GC</span>
+</div>
           <span className="font-semibold text-white font-['Syne'] text-sm">
-            Gaurav Chavda<span className="text-cyan-400">.</span>
+            Gaurav Chavda<span className="text-cyan-400"></span>
           </span>
         </div>
 

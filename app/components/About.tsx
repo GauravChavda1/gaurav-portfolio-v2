@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { CheckCircle2, Cpu, Database, GitBranch, Layers, Smartphone, Zap } from "lucide-react";
+import { CheckCircle2, Cpu, Database, GitBranch, Layers, Smartphone, Zap ,} from "lucide-react";
 
 const highlights = [
   { icon: <Smartphone size={18} />, text: "Flutter & Dart expertise for iOS & Android" },
@@ -12,9 +12,11 @@ const highlights = [
   { icon: <Cpu size={18} />, text: "State management: Provider, GetX, BLoC" },
   { icon: <Zap size={18} />, text: "Performance optimization & smooth animations" },
   { icon: <GitBranch size={18} />, text: "Git workflows & collaborative development" },
+  { icon: <GitBranch size={18} />, text: "Published and maintained production Flutter applications" },
+
 ];
 
-const techStack = ["Provider", "GetX", "BLoC", "REST APIs", "Firebase", "SQLite", "Hive", "Riverpod"];
+const techStack = ["Provider", "GetX", "BLoC", "REST APIs", "Firebase", "SQLite", "Hive","WebSocket"];
 
 export default function About() {
   const ref = useRef(null);
@@ -46,20 +48,17 @@ export default function About() {
             transition={{ duration: 0.7, delay: 0.1 }}
           >
             <p className="text-slate-300 text-lg leading-relaxed mb-6">
-              I&apos;m <strong className="text-white">Gaurav Chavda</strong>, a Flutter Developer based in Ahmedabad,
-              India, passionate about crafting high-performance mobile applications that users love.
-              With a Master&apos;s degree in Information Technology and hands-on experience building
-              real-world products, I bring both technical depth and product sensibility to every project.
+              I&apos;m <strong className="text-white">Gaurav Chavda</strong>, a Flutter Developer based in Ahmedabad, India, with 3+ years of experience building cross-platform mobile applications. I specialize in developing scalable Flutter solutions using MVVM architecture, state management, and modern mobile development practices.
             </p>
             <p className="text-slate-400 leading-relaxed mb-6">
               My focus is on building scalable, maintainable codebases using modern architecture patterns.
               I&apos;ve shipped multiple production Flutter apps — from fintech wallets to community platforms
               to SaaS membership systems — each engineered with clean separation of concerns, performant
-              state management, and pixel-perfect UIs.
+              state management, and responsive and user-friendly interfaces.
             </p>
             <p className="text-slate-400 leading-relaxed mb-10">
               Recognized as <span className="text-cyan-400 font-medium">Employee of the Quarter</span>, I thrive
-              in collaborative environments, take ownership of complex technical challenges, and consistently
+              in collaborative environments, enjoy solving complex technical challenges, and consistently
               deliver polished, production-ready software.
             </p>
 

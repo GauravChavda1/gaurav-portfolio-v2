@@ -48,8 +48,11 @@ export default function Navbar() {
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <a href="#" className="flex items-center gap-2 group">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
-              <Code2 size={16} className="text-white" />
-            </div>
+              {/* <Code2 size={16} className="text-white" /> */}
+
+<div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+  <span className="text-white text-sm font-bold">GC</span>
+</div>            </div>
             <span className="font-semibold text-white font-['Syne'] tracking-wide">
               Gaurav Chavda<span className="text-cyan-400"></span>
             </span>

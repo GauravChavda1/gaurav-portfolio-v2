@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import { ArrowDown,  Mail, Download, Layers, Zap, Star } from "lucide-react";
 import { GithubIcon } from "./GithubIcon";
 import { LinkedInIcon } from "./LinkedInIcon";
-
+import { FileText } from "lucide-react";
 const badges = ["Flutter", "Dart", "Firebase", "REST APIs", "MVVM", "BLoC"];
 
 const statsCards = [
   { icon: <Layers size={16} />, label: "Projects", value: "10+" },
-  { icon: <Zap size={16} />, label: "Experience", value: "2+ Yrs" },
+  { icon: <Zap size={16} />, label: "Experience", value: "3+ Yrs" },
   { icon: <Star size={16} />, label: "Award", value: "EotQ" },
 ];
 
@@ -116,12 +116,14 @@ export default function Hero() {
                 Contact Me
               </a>
               <a
-                href="mailto:gauravchavda3430@gmail.com"
+                href="/Gaurav_Chavda_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-6 py-3 rounded-xl font-semibold text-sm border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10 transition-all flex items-center gap-2"
               >
-                <Download size={15} />
-                Resume
-              </a>
+              <FileText size={15} />
+Resume
+                </a>
             </motion.div>
 
             {/* Social Links */}

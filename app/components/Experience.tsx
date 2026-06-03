@@ -10,15 +10,15 @@ const experiences = [
     type: "work",
     icon: <Briefcase size={16} />,
     role: "Flutter Developer",
-    company: "Software Company, Ahmedabad",
-    period: "2022 – Present",
+    company: "TD TECH SOLUTIONS, Ahmedabad",
+    period: "Dec 2024 – Present",
     description:
-      "Designed and developed multiple production-grade Flutter applications across diverse domains — fintech, SaaS, community platforms, IoT, and AR. Led architecture decisions, mentored peers, and delivered polished mobile experiences.",
-    achievements: [
+"Designed and developed production-grade Flutter applications across fintech, SaaS, community platforms, IoT, and AR domains. Contributed to architecture discussions and delivered scalable mobile experiences."
+   , achievements: [
       "Built 6+ production Flutter apps shipped to real users",
       "Implemented MVVM and Clean Architecture patterns across projects",
       "Integrated Firebase, REST APIs, Bluetooth, and Google Maps",
-      "Optimized app performance — smooth 60fps rendering",
+     "Improved application performance through widget optimization and efficient state management.",
       "Collaborated cross-functionally with design and backend teams",
     ],
     badge: { icon: <Star size={12} />, text: "Employee of the Quarter", color: "text-amber-400 border-amber-500/30 bg-amber-500/10" },
@@ -26,24 +26,43 @@ const experiences = [
   {
     type: "work",
     icon: <Briefcase size={16} />,
-    role: "Flutter Developer (Maintenance & Feature Expansion)",
-    company: "Mobile Product Studio",
-    period: "2022 – 2023",
+    role: "Flutter Developer",
+    company: "BATSYS PVT LTD",
+    period: "MARCH 2024 – SEPTEMBER 2024",
     description:
       "Maintained and enhanced existing Flutter codebases, addressing technical debt while adding new features. Gained deep experience in debugging complex state management and improving app performance.",
     achievements: [
       "Refactored legacy Provider code to cleaner BLoC architecture",
-      "Reduced crash rate by 40% through proactive debugging",
+      "Resolved critical bugs and stability issues through proactive debugging.",
       "Added new feature modules without breaking existing functionality",
       "Collaborated in agile sprint cycles with clear delivery timelines",
     ],
   },
+{
+  type: "work",
+  icon: <Briefcase size={16} />,
+  role: "Junior Flutter Developer",
+  company: "IOTTIVE PVT LTD",
+  period: "JANUARY 2023 – FEBRUARY 2024",
+  description:
+    "Started my professional Flutter journey by learning and applying Flutter development in real-world projects. Worked on mobile applications using Provider and MVVM architecture, integrated REST APIs, handled real-time data using WebSockets, and gained exposure to IoT-based solutions.",
+  achievements: [
+    "Developed and maintained Flutter applications using Provider state management",
+    "Implemented MVVM architecture for scalable and maintainable code",
+    "Built a live cricket score application with real-time match updates",
+    "Integrated WebSocket connections for instant data synchronization",
+    "Worked with REST APIs and JSON data parsing",
+    "Gained hands-on exposure to IoT concepts and device communication",
+    "Collaborated with senior developers and participated in code reviews",
+    "Learned Flutter best practices, debugging, and performance optimization",
+  ],
+},
   {
     type: "education",
     icon: <GraduationCap size={16} />,
     role: "MSc in Information Technology",
-    company: "University, Gujarat, India",
-    period: "2020 – 2022",
+    company: "Gujarat University, Gujarat, India",
+    period: "2021 – 2023",
     description:
       "Advanced studies in software engineering, database systems, networking, and mobile application development. Graduation project focused on mobile app architecture and cross-platform development.",
     achievements: [
