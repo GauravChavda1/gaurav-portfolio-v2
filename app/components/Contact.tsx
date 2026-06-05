@@ -21,7 +21,7 @@ const contactLinks = [
     icon: <LinkedInIcon size={20} />,
     label: "LinkedIn",
     value: "linkedin.com/in/gaurav-chavda",
-    href: "https://www.linkedin.com/in/gaurav-chavda-99b903235",
+    href: "https://www.linkedin.com/in/gauravchavda",
     color: "from-blue-500 to-indigo-600",
     border: "border-blue-500/30",
     bg: "hover:bg-blue-500/10",

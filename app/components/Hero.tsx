@@ -137,7 +137,7 @@ Resume
               <div className="flex gap-3">
                 {[
                   { href: "https://github.com/GauravChavda1", icon: <GithubIcon size={18} /> },
-                  { href: "https://www.linkedin.com/in/gaurav-chavda-99b903235", icon: <LinkedInIcon size={18} /> },
+                  { href: "https://www.linkedin.com/in/gauravchavda", icon: <LinkedInIcon size={18} /> },
                   { href: "mailto:gauravchavda3430@gmail.com", icon: <Mail size={18} /> },
                 ].map((s, i) => (
                   <a
