@@ -1,25 +1,76 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+// export const metadata: Metadata = {
+
+//   title: "Gaurav Chavda | Flutter Developer",
+//   description:
+//     "Flutter Developer specializing in high-performance mobile applications, scalable architectures, and modern user experiences. Based in Ahmedabad, Gujarat, India.",
+//   keywords: ["Flutter Developer", "Dart", "Mobile App Developer", "Ahmedabad", "Firebase", "MVVM", "BLoC"],
+//   authors: [{ name: "Gaurav Chavda" }],
+//   creator: "Gaurav Chavda",
+//   openGraph: {
+//     type: "website",
+//     locale: "en_IN",
+//     url: "https://gauravchavda.in",
+//     title: "Gaurav Chavda | Flutter Developer",
+//     description: "Building scalable mobile experiences with Flutter",
+//     siteName: "Gaurav Chavda Portfolio",
+//   },
+//   twitter: {
+//     card: "summary_large_image",
+//     title: "Gaurav Chavda | Flutter Developer",
+//     description: "Building scalable mobile experiences with Flutter",
+//   },
+// };
 export const metadata: Metadata = {
-  title: "Gaurav Chavda | Flutter Developer",
+  title: "Gaurav Chavda | Flutter Developer Ahmedabad",
   description:
-    "Flutter Developer specializing in high-performance mobile applications, scalable architectures, and modern user experiences. Based in Ahmedabad, Gujarat, India.",
-  keywords: ["Flutter Developer", "Dart", "Mobile App Developer", "Ahmedabad", "Firebase", "MVVM", "BLoC"],
+    "Flutter Developer with 3+ years building production mobile apps in fintech, HR tech, SaaS and community platforms. Based in Ahmedabad, Gujarat, India. Open to new opportunities.",
+  keywords: [
+    "Flutter Developer",
+    "Dart",
+    "Mobile App Developer",
+    "Ahmedabad",
+    "Gujarat",
+    "Firebase",
+    "MVVM",
+    "BLoC",
+    "Flutter freelancer India",
+    "cross-platform mobile developer",
+  ],
   authors: [{ name: "Gaurav Chavda" }],
   creator: "Gaurav Chavda",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+  alternates: {
+    canonical: "https://gauravchavda.in",
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://gauravchavda.in",
     title: "Gaurav Chavda | Flutter Developer",
-    description: "Building scalable mobile experiences with Flutter",
+    description:
+      "Flutter Developer · 3+ years · Fintech · SaaS · HR Tech · Ahmedabad",
     siteName: "Gaurav Chavda Portfolio",
+    images: [
+      {
+        url: "https://gauravchavda.in/og-image.png", // see below — create this file
+        width: 1200,
+        height: 630,
+        alt: "Gaurav Chavda – Flutter Developer, Ahmedabad",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Gaurav Chavda | Flutter Developer",
-    description: "Building scalable mobile experiences with Flutter",
+    description: "Flutter Developer · 3+ years · Ahmedabad, India",
+    images: ["https://gauravchavda.in/og-image.png"],
   },
 };
 
