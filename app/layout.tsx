@@ -26,7 +26,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Gaurav Chavda | Flutter Developer Ahmedabad",
   description:
-    "Flutter Developer with 3+ years building production mobile apps in fintech, HR tech, SaaS and community platforms. Based in Ahmedabad, Gujarat, India. Open to new opportunities.",
+    "Flutter Developer with 3+ years shipping production apps in fintech, HR tech and SaaS. Based in Ahmedabad, India. Open to new opportunities.",
   keywords: [
     "Flutter Developer",
     "Dart",

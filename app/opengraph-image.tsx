@@ -30,6 +30,21 @@ export default function OgImage() {
       <div style={{ color: "#64748b", fontSize: 20 }}>
         3+ years · Fintech · SaaS · HR Tech · Community Platforms
       </div>
+      {/* CTA button — this is what the warning is asking for */}
+      <div style={{
+        display: "flex", alignItems: "center", gap: 12, marginTop: "auto"
+      }}>
+        <div style={{
+          background: "#3b82f6", color: "#fff", fontSize: 20,
+          fontWeight: 600, padding: "12px 28px", borderRadius: 8,
+        }}>
+          View Portfolio →
+        </div>
+        <div style={{ color: "#475569", fontSize: 18 }}>
+          Open to opportunities
+        </div>
+      </div>
     </div>
+    
   );
 }
