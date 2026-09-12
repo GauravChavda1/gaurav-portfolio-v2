@@ -83,6 +83,7 @@ export default function Experience() {
 
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
+          data-motion-reveal
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -99,6 +100,7 @@ export default function Experience() {
           <div className="space-y-8">
             {experiences.map((exp, i) => (
               <motion.div
+          data-motion-reveal
                 key={i}
                 initial={{ opacity: 0, x: -20 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -113,7 +115,7 @@ export default function Experience() {
                 <div className="glass-card rounded-2xl p-6 border border-white/8 hover:border-cyan-500/20 transition-colors">
                   <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
                     <div>
-                      <h3 className="font-bold text-white text-lg font-['Syne']">{exp.role}</h3>
+                      <h3 className="font-bold text-white text-lg font-heading">{exp.role}</h3>
                       <p className="text-cyan-400 text-sm mt-0.5">{exp.company}</p>
                     </div>
                     <div className="flex items-center gap-3 flex-wrap">

@@ -29,6 +29,7 @@ export default function About() {
 
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
+          data-motion-reveal
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -43,6 +44,7 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left text */}
           <motion.div
+          data-motion-reveal
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1 }}
@@ -66,6 +68,7 @@ export default function About() {
             <div className="flex flex-wrap gap-2">
               {techStack.map((tech, i) => (
                 <motion.span
+          data-motion-reveal
                   key={tech}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
@@ -80,6 +83,7 @@ export default function About() {
 
           {/* Right highlights */}
           <motion.div
+          data-motion-reveal
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -87,6 +91,7 @@ export default function About() {
           >
             {highlights.map((item, i) => (
               <motion.div
+          data-motion-reveal
                 key={i}
                 initial={{ opacity: 0, y: 15 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -102,6 +107,7 @@ export default function About() {
 
             {/* MSc Card */}
             <motion.div
+          data-motion-reveal
               initial={{ opacity: 0, y: 15 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.75 }}

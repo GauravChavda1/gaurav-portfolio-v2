@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown,  Mail, Download, Layers, Zap, Star } from "lucide-react";
+import { ArrowDown, Mail, Layers, Zap, Star } from "lucide-react";
 import { GithubIcon } from "./GithubIcon";
 import { LinkedInIcon } from "./LinkedInIcon";
 import { FileText } from "lucide-react";
@@ -43,6 +43,7 @@ export default function Hero() {
           <div className="flex-1 text-center lg:text-left">
             {/* Status Badge */}
             <motion.div
+          data-motion-reveal
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -67,6 +68,7 @@ export default function Hero() {
 
             {/* Sub */}
             <motion.p
+          data-motion-reveal
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -78,6 +80,7 @@ export default function Hero() {
 
             {/* Badges */}
             <motion.div
+          data-motion-reveal
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -85,6 +88,7 @@ export default function Hero() {
             >
               {badges.map((badge, i) => (
                 <motion.span
+          data-motion-reveal
                   key={badge}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -98,6 +102,7 @@ export default function Hero() {
 
             {/* CTAs */}
             <motion.div
+          data-motion-reveal
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.45 }}
@@ -128,6 +133,7 @@ Resume
 
             {/* Social Links */}
             <motion.div
+          data-motion-reveal
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
@@ -156,6 +162,7 @@ Resume
 
           {/* Right — Profile Visual */}
           <motion.div
+          data-motion-reveal
             initial={{ opacity: 0, scale: 0.8, x: 40 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
@@ -186,6 +193,7 @@ Resume
                 const delays = [0.5, 0.6, 0.7];
                 return (
                   <motion.div
+          data-motion-reveal
                     key={card.label}
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -195,7 +203,7 @@ Resume
                   >
                     <span className="text-cyan-400">{card.icon}</span>
                     <div>
-                      <div className="text-white font-bold text-sm font-['Syne']">{card.value}</div>
+                      <div className="text-white font-bold text-sm font-heading">{card.value}</div>
                       <div className="text-slate-500 text-xs">{card.label}</div>
                     </div>
                   </motion.div>
@@ -212,6 +220,7 @@ Resume
 
         {/* Scroll Indicator */}
         <motion.div
+          data-motion-reveal
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}

@@ -66,6 +66,7 @@ export default function Achievements() {
 
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
+          data-motion-reveal
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -78,6 +79,7 @@ export default function Achievements() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {achievements.map((item, i) => (
             <motion.div
+          data-motion-reveal
               key={item.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -87,7 +89,7 @@ export default function Achievements() {
               <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-50 group-hover:opacity-70 transition-opacity`} />
               <div className="relative z-10">
                 <div className={`mb-4 ${item.iconColor}`}>{item.icon}</div>
-                <h3 className="font-bold text-white mb-2 font-['Syne']">{item.title}</h3>
+                <h3 className="font-bold text-white mb-2 font-heading">{item.title}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{item.description}</p>
               </div>
             </motion.div>

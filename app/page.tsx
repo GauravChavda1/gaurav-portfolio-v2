@@ -8,22 +8,6 @@ import Achievements from "./components/Achievements";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-// export default function Home() {
-//   return (
-//     <main className="relative min-h-screen bg-[#030712] text-white overflow-x-hidden">
-//       <Navbar />
-//       <Hero />
-//       <About />
-//       <Skills />
-//       <Projects />
-//       <Experience />
-//       <Achievements />
-//       <Contact />
-//       <Footer />
-//     </main>
-//   );
-// }
-
 export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -40,7 +24,7 @@ export default function Home() {
       addressCountry: "IN",
     },
     sameAs: [
-      "https://linkedin.com/in/gaurav-chavda",
+      "https://www.linkedin.com/in/gauravchavda",
       "https://github.com/GauravChavda1",
     ],
     knowsAbout: [

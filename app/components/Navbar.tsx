@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Code2 } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -16,6 +16,38 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+
+  const menuRef = useRef<HTMLDialogElement>(null);
+  const toggleRef = useRef<HTMLButtonElement>(null);
+
+  const closeMenu = () => {
+    menuRef.current?.close();
+    setMobileOpen(false);
+  };
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const menu = menuRef.current;
+    const toggle = toggleRef.current;
+    if (!menu) return;
+    menu.showModal();
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const desktop = window.matchMedia("(min-width: 48rem)");
+    const handleResize = () => {
+      if (desktop.matches) {
+        menu.close();
+        setMobileOpen(false);
+      }
+    };
+    desktop.addEventListener("change", handleResize);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      desktop.removeEventListener("change", handleResize);
+      menu.close();
+      if (!desktop.matches) toggle?.focus();
+    };
+  }, [mobileOpen]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,6 +68,7 @@ export default function Navbar() {
   return (
     <>
       <motion.nav
+          data-motion-reveal
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
@@ -48,12 +81,11 @@ export default function Navbar() {
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <a href="#" className="flex items-center gap-2 group">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
-              {/* <Code2 size={16} className="text-white" /> */}
 
 <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
   <span className="text-white text-sm font-bold">GC</span>
 </div>            </div>
-            <span className="font-semibold text-white font-['Syne'] tracking-wide">
+            <span className="font-semibold text-white font-heading tracking-wide">
               Gaurav Chavda<span className="text-cyan-400"></span>
             </span>
           </a>
@@ -81,33 +113,46 @@ export default function Navbar() {
           </div>
 
           <button
-            className="md:hidden p-2 text-slate-400 hover:text-white"
-            onClick={() => setMobileOpen(!mobileOpen)}
+            ref={toggleRef}
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-navigation"
+            className="md:hidden p-2 text-slate-400 hover:text-white focus-visible:outline-2 focus-visible:outline-cyan-400"
+            onClick={() => setMobileOpen(true)}
           >
-            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+            <Menu size={22} aria-hidden="true" />
           </button>
         </div>
       </motion.nav>
 
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-[#030712]/95 backdrop-blur-xl pt-20 px-6"
-          >
-            <div className="flex flex-col gap-2">
+      <dialog
+        ref={menuRef}
+        id="mobile-navigation"
+        aria-label="Mobile navigation"
+        onCancel={closeMenu}
+        onClose={() => setMobileOpen(false)}
+        className="fixed inset-0 m-0 h-dvh max-h-none w-screen max-w-none overflow-y-auto border-0 bg-[#030712]/95 px-6 pb-6 pt-20 text-white backdrop:bg-[#030712]/80"
+      >
+        <button
+          type="button"
+          onClick={closeMenu}
+          aria-label="Close navigation menu"
+          className="absolute right-6 top-4 p-2 text-slate-400 hover:text-white focus-visible:outline-2 focus-visible:outline-cyan-400"
+        >
+          <X size={22} aria-hidden="true" />
+        </button>
+        <nav aria-label="Mobile" className="flex flex-col gap-2 [&_a:focus-visible]:outline-2 [&_a:focus-visible]:outline-cyan-400">
               {navLinks.map((link, i) => (
                 <motion.a
+          data-motion-reveal
                   key={link.href}
                   href={link.href}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
                   className="py-4 px-4 rounded-xl text-lg font-medium text-slate-300 hover:text-white hover:bg-white/5 border-b border-white/5"
-                  onClick={() => setMobileOpen(false)}
+                  onClick={closeMenu}
                 >
                   {link.label}
                 </motion.a>
@@ -115,14 +160,12 @@ export default function Navbar() {
               <a
                 href="#contact"
                 className="mt-4 py-4 text-center rounded-xl text-lg font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white"
-                onClick={() => setMobileOpen(false)}
+                onClick={closeMenu}
               >
                 Hire Me
               </a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+        </nav>
+      </dialog>
     </>
   );
 }

@@ -16,7 +16,6 @@ import {
   SiPostman,
   SiHive,
   SiGooglemaps,
-  Si1And1,
   SiJira,
   SiSqlite,
 } from "react-icons/si";
@@ -169,6 +168,7 @@ export default function Skills() {
         <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
           {skillGroups.map((group, index) => (
             <motion.div
+          data-motion-reveal
               key={group.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

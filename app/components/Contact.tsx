@@ -5,7 +5,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { GithubIcon } from "./GithubIcon";
 import { LinkedInIcon } from "./LinkedInIcon";
-import { Mail, ArrowUpRight, MapPin, MessageCircle } from "lucide-react";
+import { Mail, ArrowUpRight, MapPin } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 const contactLinks = [
   {
@@ -20,7 +20,7 @@ const contactLinks = [
   {
     icon: <LinkedInIcon size={20} />,
     label: "LinkedIn",
-    value: "linkedin.com/in/gaurav-chavda",
+    value: "linkedin.com/in/gauravchavda",
     href: "https://www.linkedin.com/in/gauravchavda",
     color: "from-blue-500 to-indigo-600",
     border: "border-blue-500/30",
@@ -59,6 +59,7 @@ export default function Contact() {
 
       <div className="max-w-4xl mx-auto px-6">
         <motion.div
+          data-motion-reveal
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -73,6 +74,7 @@ export default function Contact() {
 
         {/* Main Contact Card */}
         <motion.div
+          data-motion-reveal
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.1 }}
@@ -85,7 +87,7 @@ export default function Contact() {
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
               <div>
-                <h3 className="text-2xl font-bold text-white font-['Syne']">Gaurav Chavda</h3>
+                <h3 className="text-2xl font-bold text-white font-heading">Gaurav Chavda</h3>
                 <p className="text-cyan-400 mt-1">Flutter Developer</p>
               </div>
               <div className="flex items-center gap-2 text-slate-500 text-sm">
@@ -104,6 +106,7 @@ export default function Contact() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {contactLinks.map((link, i) => (
                 <motion.a
+          data-motion-reveal
                   key={link.label}
                   href={link.href}
                   target={link.href.startsWith("http") ? "_blank" : undefined}

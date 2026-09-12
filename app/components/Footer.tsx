@@ -1,6 +1,6 @@
 "use client";
 
-import {   Mail, Code2 } from "lucide-react";
+import { Mail } from "lucide-react";
 import { GithubIcon } from "./GithubIcon";
 import { LinkedInIcon } from "./LinkedInIcon";
 
@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
   <span className="text-white text-xs font-bold">GC</span>
 </div>
-          <span className="font-semibold text-white font-['Syne'] text-sm">
+          <span className="font-semibold text-white font-heading text-sm">
             Gaurav Chavda<span className="text-cyan-400"></span>
           </span>
         </div>
