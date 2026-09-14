@@ -15,6 +15,9 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
+  },
   title: "Gaurav Chavda | Flutter Developer Ahmedabad",
 
   description:
